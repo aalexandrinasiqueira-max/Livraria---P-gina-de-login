@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cadastro | Livraria SENAI</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body class="register-page">
+
+    <main class="register-layout">
+
+
+        <!-- LADO ESQUERDO -->
+
+        <aside class="register-intro">
+
+            <a href="index.html" class="brand brand-register">
+
+                <img
+                    src="logo.png"
+                    class="logo"
+                    alt="Logo da Livraria SENAI"
+                >
+
+            </a>
+
+
+            <div>
+
+                <span class="eyebrow">
+                    BEM-VINDO(A)
+                </span>
+
+                <h1>
+                    Faça parte da nossa comunidade de leitores.
+                </h1>
+
+                <p>
+                    Cadastre seus dados para começar a explorar
+                    a biblioteca virtual.
+                </p>
+
+            </div>
+
+
+            <a href="index.html" class="back-link">
+                ← Voltar para o início
+            </a>
+
+        </aside>
+
+
+
+        <!-- FORMULÁRIO -->
+
+        <section class="form-panel">
+
+            <div class="form-heading">
+
+                <div>
+
+                    <span class="eyebrow">
+                        NOVO CADASTRO
+                    </span>
+
+                    <h2>
+                        Crie sua conta
+                    </h2>
+
+                </div>
+
+
+                <div class="security-badge">
+                    🔒 Dados protegidos
+                </div>
+
+            </div>
+
+
+            <div
+                id="message"
+                class="form-message"
+                role="alert"
+                aria-live="polite"
+            ></div>
+
+
+
+            <form id="login" novalidate>
+
+
+                <div class="form-grid">
+
+
+                    <!-- NOME -->
+
+                    <div class="field full">
+
+                        <label for="nome">
+                            Nome completo
+                        </label>
+
+                        <input
+                            type="text"
+                            id="nome"
+                            name="nome"
+                            autocomplete="name"
+                            placeholder="Ex.: Maria da Silva"
+                            minlength="3"
+                            maxlength="100"
+                            required
+                        >
+
+                        <small
+                            class="field-error"
+                            id="nome-error"
+                        ></small>
+
+                    </div>
+
+
+
+                    <!-- EMAIL -->
+
+                    <div class="field">
+
+                        <label for="email">
+                            E-mail
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            autocomplete="email"
+                            placeholder="voce@exemplo.com"
+                            maxlength="120"
+                            required
+                        >
+
+                        <small
+                            class="field-error"
+                            id="email-error"
+                        ></small>
+
+                    </div>
+
+
+
+                    <!-- CPF -->
+
+                    <div class="field">
+
+                        <label for="cpf">
+                            CPF
+                        </label>
+
+                        <input
+                            type="text"
+                            id="cpf"
+                            name="cpf"
+                            inputmode="numeric"
+                            autocomplete="off"
+                            placeholder="000.000.000-00"
+                            maxlength="14"
+                            required
+                        >
+
+                        <small class="field-hint">
+                            Digite somente os números; a formatação será automática.
+                        </small>
+
+                        <small
+                            class="field-error"
+                            id="cpf-error"
+                        ></small>
+
+                    </div>
+
+
+
+                    <!-- ENDEREÇO -->
+
+                    <div class="field full">
+
+                        <label for="endereco">
+                            Endereço
+                        </label>
+
+                        <input
+                            type="text"
+                            id="endereco"
+                            name="endereco"
+                            autocomplete="street-address"
+                            placeholder="Rua, número, bairro, cidade"
+                            maxlength="180"
+                            required
+                        >
+
+                        <small
+                            class="field-error"
+                            id="endereco-error"
+                        ></small>
+
+                    </div>
+
+
+
+                    <!-- SENHA -->
+
+                    <div class="field">
+
+                        <label for="senha">
+                            Senha
+                        </label>
+
+                        <div class="password-wrap">
+
+                            <input
+                                type="password"
+                                id="senha"
+                                name="senha"
+                                autocomplete="new-password"
+                                placeholder="Crie uma senha"
+                                maxlength="72"
+                                required
+                            >
+
+                            <button
+                                type="button"
+                                class="toggle-password"
+                                data-target="senha"
+                                aria-label="Mostrar senha"
+                            >
+                                👁
+                            </button>
+
+                        </div>
+
+
+                        <div class="password-meter">
+                            <span id="password-bar"></span>
+                        </div>
+
+
+                        <small class="field-hint">
+                            8–72 caracteres, com maiúscula, minúscula,
+                            número e símbolo.
+                        </small>
+
+
+                        <small
+                            class="field-error"
+                            id="senha-error"
+                        ></small>
+
+                    </div>
+
+
+
+                    <!-- CONFIRMAR SENHA -->
+
+                    <div class="field">
+
+                        <label for="confirmarSenha">
+                            Confirmar senha
+                        </label>
+
+                        <div class="password-wrap">
+
+                            <input
+                                type="password"
+                                id="confirmarSenha"
+                                name="confirmarSenha"
+                                autocomplete="new-password"
+                                placeholder="Repita a senha"
+                                maxlength="72"
+                                required
+                            >
+
+                            <button
+                                type="button"
+                                class="toggle-password"
+                                data-target="confirmarSenha"
+                                aria-label="Mostrar senha"
+                            >
+                                👁
+                            </button>
+
+                        </div>
+
+
+                        <small
+                            class="field-error"
+                            id="confirmarSenha-error"
+                        ></small>
+
+                    </div>
+
+
+
+                    <!-- FOTO -->
+
+                    <div class="field full">
+
+                        <label for="imagem">
+                            Foto de perfil
+                        </label>
+
+                        <input
+                            type="file"
+                            id="imagem"
+                            name="imagem"
+                            accept="image/png,image/jpeg,image/webp"
+                            required
+                        >
+
+                        <small class="field-hint">
+                            PNG, JPG ou WEBP — máximo de 5 MB.
+                        </small>
+
+                        <small
+                            class="field-error"
+                            id="imagem-error"
+                        ></small>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- AVISO -->
+
+                <div class="privacy-note">
+
+                    <span>
+                        🔐
+                    </span>
+
+                    <p>
+                        A senha <strong>não é salva em texto puro</strong>.
+                        Os dados são protegidos antes do arquivo de cadastro
+                        ser gerado.
+                    </p>
+
+                </div>
+
+
+
+                <button
+                    type="submit"
+                    class="primary-button submit-button"
+                >
+
+                    Criar conta e proteger dados
+
+                    <span>
+                        →
+                    </span>
+
+                </button>
+
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
